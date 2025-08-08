@@ -1,0 +1,187 @@
+/* Color Palette & Fonts */
+:root {
+    --background-color: #121212;
+    --card-bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --text-muted-color: #b0b0b0;
+    --accent-color: #2196f3; /* A cool blue accent */
+    --accent-hover: #1976d2;
+    --border-color: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --input-bg-color: #2a2a2a;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* General Body and Container Styling */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: var(--card-bg-color);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    padding: 50px;
+    width: 100%;
+    max-width: 500px; /* Smaller width for a signup form */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Header and Logo Styling */
+header {
+    margin-bottom: 40px;
+}
+
+.logo {
+width: 100px; 
+height: 100px;
+margin: 0 auto 20px;
+border: 0px solid var(--accent-color);
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden; 
+}
+
+.logo img {
+display: block; 
+max-width: 80%; 
+max-height: 80%;
+width: auto;
+height: auto;
+object-fit: contain;
+}
+
+h1 {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 2.2em;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Form Group & Label Styling */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+/* Input and Select Styling */
+input[type="text"],
+input[type="password"],
+select {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    border-radius: 0;
+}
+
+input::placeholder,
+select::placeholder {
+    color: var(--text-muted-color);
+    font-weight: 300;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+select {
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+}
+
+select option {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+}
+
+.name-group {
+    display: flex;
+    gap: 15px;
+}
+
+.name-group input {
+    flex: 1;
+}
+
+/* Button Styling */
+.button-group {
+    margin-top: 40px;
+}
+
+.button-group .submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.button-group .submit-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(33, 150, 243, 0.4);
+}
+
+/* Link Styling */
+.login-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--text-muted-color);
+}
+
+.login-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.login-link a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}

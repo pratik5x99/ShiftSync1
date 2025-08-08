@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift Sync - Create Account</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+          <img src="images/logo.jpeg" alt="Shift Sync Logo" />
+        </div>
+            <h1>Create Account</h1>
+        </header>
+
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <label for="username">Employee ID</label>
+                <input type="text" id="username" name="username" placeholder="Enter your employee ID" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <div class="name-group">
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Account Type</label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Select an account type</option>
+                    <option value="operator">Shift Operator</option>
+                    <option value="manager">Manager</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Create Account</button>
+            </div>
+        </form>
+
+        <p class="login-link">Already have an account? <a href="login.html">Log in here.</a></p>
+    </div>
+</body>
+</html>
