@@ -1,0 +1,26 @@
+CRITICAL: Dependency Folders
+
+/node_modules
+
+Package Manager Files
+
+package-lock.json
+npm-debug.log
+yarn-error.log
+
+NODE.JS SPECIFIC FILES
+
+*.log
+/logs
+
+OPERATING SYSTEM FILES (macOS)
+
+.DS_Store
+
+SECURITY: DO NOT COMMIT CREDENTIALS
+
+The server.js file contains your local MySQL password, so we must ignore it.
+
+server.js
+config.js
+server_local.js
