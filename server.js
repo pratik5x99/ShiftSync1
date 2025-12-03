@@ -31,14 +31,13 @@ const dbOptions = {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE || 'mining_project',
-    // SSL is usually required for cloud databases like PlanetScale or Aiven
-    ssl: { rejectUnauthorized: true } 
-};
+    database: process.env.DB_DATABASE || 'defaultdb', // Update default if needed
+    port: process.env.DB_PORT || 3306,
+    ssl: { rejectUnauthorized: true }
+}; // Line 37
 
-// Create the Database Connection
-const db = mysql.createConnection(dbOptions);
-
+// Line 38 is now empty or just a blank space
+const db = mysql.createConnection(dbOptions); // Line 39
 db.connect(err => {
     if (err) {
         console.error('Error connecting to the database:', err);
