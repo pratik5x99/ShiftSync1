@@ -1,26 +1,14 @@
-CRITICAL: Dependency Folders
-
+# --- Dependencies (Too big to upload) ---
 /node_modules
 
-Package Manager Files
+# --- Security (The ACTUAL secrets live here) ---
+.env
 
-package-lock.json
-npm-debug.log
-yarn-error.log
-
-NODE.JS SPECIFIC FILES
-
+# --- Logs and System Files ---
 *.log
 /logs
-
-OPERATING SYSTEM FILES (macOS)
-
 .DS_Store
 
-SECURITY: DO NOT COMMIT CREDENTIALS
-
-The server.js file contains your local MySQL password, so we must ignore it.
-
-server.js
-config.js
+# --- Optional: Local backups you don't want on GitHub ---
 server_local.js
+config.js
